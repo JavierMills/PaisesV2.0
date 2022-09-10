@@ -22,5 +22,19 @@ buscarPais( value : string): Observable<Country[]>{
 
 }
 
+buscarCapital( value : string): Observable<Country[]>{
+
+  const urlComplete = `${this.apiURL}/capital/${ value }`;
+  return this.http.get<Country[]>(urlComplete);
+
+}
+
+
+getPaisCode( id : string): Observable<Country>{
+
+  const urlComplete = `${this.apiURL}/alpha/${ id }`;
+  return this.http.get<Country>(urlComplete);
+
+}
 
 }

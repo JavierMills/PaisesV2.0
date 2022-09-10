@@ -23,7 +23,7 @@ public paises : Country [] = [];
 
     this.paisService.buscarPais(termino)
     .subscribe( (resp) => {
-    console.log(resp);
+    console.log(resp[0]);
   this.paises = resp;
 
     }, (error) => {
@@ -31,6 +31,8 @@ public paises : Country [] = [];
       this.paises = [];
     })
   }
-
+  sugerencias( termino : string){
+    this.ExistError = false;
+  }
 
 }

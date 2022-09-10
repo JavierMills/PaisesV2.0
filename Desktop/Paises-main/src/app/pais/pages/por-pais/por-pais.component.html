@@ -1,9 +1,11 @@
 <div class="container">
   <h2>Por país</h2>
-
   <div class="row">
     <div class="col">
-      <app-pais-input (onEnter)="find( $event )"></app-pais-input>
+      <app-pais-input (onEnter)="find( $event )" 
+      placeholder="Buscar Pais" 
+      (onDebounce)="sugerencias( $event )"
+      ></app-pais-input>
     </div>
   </div>
 </div>
@@ -14,7 +16,7 @@ class="alert alert-danger">
     No se encontra nada con el <b>{{termino}}...</b>
 </div>
 
-<div *ngIf="paises.length > 0 " class="row">
+<div *ngIf="paises.length > 0" class="row">
     <div class="col">
         <app-pais-table [paises] = "paises"></app-pais-table>
     </div>
