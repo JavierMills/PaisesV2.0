@@ -8,7 +8,25 @@
       ></app-pais-input>
     </div>
   </div>
-</div>
+<ul class="list-group" *ngIf="mostrarSugerencias">
+  <li *ngFor=" let sugerencia of paisesSugeridos" 
+  class="list-group-item list-group-item-action">
+    <a 
+    class="nav-link"
+    [routerLink]="['/pais', sugerencia.cca2]" >
+      {{ sugerencia.name.common }}
+    </a>
+  </li>
+
+  <li  
+  class="list-group-item list-group-item-action"
+  (click)="buscarSugerido(termino)"
+  >
+    <a class="nav-link">
+     Buscar: "{{ termino }}"
+    </a>
+  </li>
+</ul>
 <hr>
 
 <div *ngIf="ExistError"
@@ -20,4 +38,5 @@ class="alert alert-danger">
     <div class="col">
         <app-pais-table [paises] = "paises"></app-pais-table>
     </div>
+</div>
 </div>
