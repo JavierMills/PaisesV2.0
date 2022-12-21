@@ -1,0 +1,7 @@
+<h1>Listado de Heroes</h1>
+<mat-divider></mat-divider>
+<br>
+<!-- estructurando la card -->
+<div class="context" *ngFor="let heroe of heroes">
+   <app-heroe-tarjeta  [routerLink]="['/heroes', heroe.id]" [heroe]="heroe"></app-heroe-tarjeta>
+</div>

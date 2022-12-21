@@ -1,0 +1,59 @@
+<div style="width: 100%; overflow-x: hidden;">
+  <mat-sidenav-container fullscreen>
+
+    <mat-sidenav #sidenav mode="push">
+      <mat-toolbar color="accent">
+        <span>Menú</span>
+      <div class="spacer"></div>
+        <button (click)="sidenav.toggle()" mat-icon-button mat-raised-button color="accent">
+          <mat-icon>
+            menu
+          </mat-icon>
+        </button>
+      </mat-toolbar>
+  
+  
+      <mat-nav-list>
+        <a routerLink="./listado" mat-list-item (click)="sidenav.toggle()">
+          <mat-icon mat-list-icon>
+            label
+          </mat-icon>
+          <span>Listado de Héroes</span>
+        </a>
+  
+        <a routerLink="./agregar" mat-list-item (click)="sidenav.toggle()">
+          <mat-icon mat-list-icon>
+            add
+          </mat-icon>
+          <span>Agregar Héroes</span>
+        </a>
+  
+        <a routerLink="./buscar" mat-list-item (click)="sidenav.toggle()">
+          <mat-icon mat-list-icon>
+            search
+          </mat-icon>
+          <span>Buscar Héroes</span>
+        </a>
+      </mat-nav-list>
+  
+  
+    </mat-sidenav>
+  
+    <mat-toolbar color="accent">
+      <button (click)="sidenav.toggle()" mat-icon-button mat-raised-button color="accent">
+        <mat-icon>
+          menu
+        </mat-icon>
+      </button>
+      <div class="spacer"></div>
+      <label for="">{{auth?.usuario}}</label>
+      <button (click)="logout()" style="margin-right: 40px;" mat-button>
+          Logout
+      </button>
+    </mat-toolbar>
+  
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+  </mat-sidenav-container>
+</div>

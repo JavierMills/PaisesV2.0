@@ -1,0 +1,112 @@
+
+.responsive{
+    width:  15%;
+    height: 15%;
+    margin-top: 50px;
+    margin-left: 75px;
+    margin-right: 10px;
+    float: left;
+    border-radius: 10px;
+    cursor: pointer;
+    border: .5px solid rgb(141, 141, 141);
+    transition: transform 650ms;
+    backdrop-filter: blur(4px);
+    z-index:5;
+    background-color: transparent;
+    color: black;
+    font-weight: 600;
+    }
+    
+    .responsive:hover {
+        transform: scale(1.08);
+      }
+    
+      @media only screen and (max-width: 1240px) {
+        .responsive{
+            width:  20%;
+            height: 20%;
+            margin-top: 50px;
+            margin-left: 50px;
+            margin-right: 25px;
+            float: left;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 650ms;
+            }
+      }
+    
+      @media only screen and (max-width: 1000px) {
+        .responsive{
+            width:  25%;
+            height: 25%;
+            margin-top: 50px;
+            margin-left: 10px;
+            margin-right: 25px;
+            float: left;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 650ms;
+            }
+      }
+      @media only screen and (max-width: 800px) {
+        .responsive{
+            width:  30%;
+            height: 30%;
+            margin-top: 50px;
+            margin-left: 60px;
+            margin-right: 25px;
+            float: left;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 650ms;
+            }
+      }
+      @media only screen and (max-width: 580px) {
+        .responsive{
+            width:  50%;
+            height: 50%;
+            margin-top: 50px;
+            margin-left: 100px;
+            margin-right: 100px;
+            float: left;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 650ms;
+            }
+      }
+      @media only screen and (max-width: 450px) {
+        .responsive{
+            width:  60%;
+            height: 60%;
+            margin-top: 50px;
+            margin-left: 50px;
+            margin-right: 50px;
+            float: left;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 650ms;
+            }
+      }
+    
+      @media only screen and (max-width: 400px) {
+        .responsive{
+            width:  60%;
+            height: 60%;
+            margin-top: 50px;
+            margin-left: 25px;
+            margin-right: 25px;
+            float: left;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 650ms;
+            }
+      }
+    
+    .float{
+        float: right;
+        width: 100vw;
+        position: absolute;
+        
+    }
+   
+    
